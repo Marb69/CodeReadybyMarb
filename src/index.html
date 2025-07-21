@@ -11,7 +11,7 @@
 
     <div class="flex flex-col min-h-screen:">
 
-        <header class="sticky w-full ">
+        <header class="fixed w-full bg-white ">
 
         <div class="flex mx-auto max-w-7xl h-16 items-center px-2.5">
 
@@ -21,55 +21,97 @@
 
             <div class="flex justify-between w-full items-center">
 
-                 <nav class="absolute top-0 left-0 bg-white shadow-xl min-auto h-screen  w-60 pt-15 rounded-2xl ">
+                 <nav class=" top-0 left-[-400px] bg-white md:bg-none shadow-xl md:shadow-none min-auto h-screen md:h-auto w-60 md:w-auto pt-15 md:pt-0 rounded-br-2xl rounded-tr-2xl md:rounded-none absolute md:static transition-all duration-300 ease-in-out z-[999] " id="navMenu">
                     <h1 class="pb-2.5  pl-2 text-3xl font-bold  bg-linear-to-r from-blue-400 to-blue-700 bg-clip-text text-transparent md:hidden">Menu</h1>
-                <ul class="font-[poppins] flex gap-5.5  flex-col  md:flex-row md:ml-10 z-50 pl-1 pt-2.5 text-[11px] border-t-[1px]">
+
+                <ul class="font-[poppins] flex gap-5.5  flex-col  md:flex-row md:ml-10 z-50 pl-1 md:pl-0 pt-2.5 md:pt-0 text-[11px] md:text-[13px] border-t-[1px] md:border-none ">
                     <li class="text-gray-500 font-medium rounded-2xl py-1 px-3.5 hover:text-blue-700 transition-all duration-300 ease-in-out cursor-pointer ">Home</li>
                      <li class="text-gray-500 font-medium rounded-2xl py-1 px-3.5 hover:text-blue-700 transition-all duration-300 ease-in-out cursor-pointer">Project</li>
                       <li class="text-gray-500 font-medium rounded-2xl py-1 px-3.5 hover:text-blue-700 transition-all duration-300 ease-in-out cursor-pointer">Service</li>
                        <li class="text-gray-500 font-medium rounded-2xl py-1 px-3.5 hover:text-blue-700 transition-all duration-300 ease-in-out cursor-pointer">About Us</li>
                        <li>  <button class="bg-blue-600 py-2 px-3.5 rounded-2xl text-white text-[11px] font-semibold bg-linear-to-r from-blue-500 to-blue-600 cursor-pointer md:hidden">Contact Us</button></li>
+                        
                 </ul>
+                
             </nav>
-               
-      
-                   <button class="bg-blue-600 py-2 px-3.5 rounded-2xl text-white text-[12px] font-semibold bg-linear-to-r from-blue-500 to-blue-600 cursor-pointer hidden">Contact Us</button>
-      
+            
+        <div class="absolute backdrop-blur-2xl w-screen h-screen left-[-800px] top-0 z-[-999]  transition-all duration-200 ease-out md:hidden " id="blurOvelay"></div>
+                   <button class="bg-blue-600 py-2 px-3.5 rounded-2xl text-white text-[12px] font-semibold bg-linear-to-r from-blue-500 to-blue-600 cursor-pointer hidden md:block">Contact Us</button>
+                
             </div>
            
 
+                 
+                   <div id="menuBtn" class="flex flex-col gap-1 z-10 md:hidden">
+                    <span class="block bg-gray-500 w-[23px] h-[3px] rounded-2xl"></span>
+                    <span class="block bg-gray-500 w-[23px] h-[3px] rounded-2xl"></span>
+                    <span class="block bg-gray-500 w-[23px] h-[3px] rounded-2xl"></span>
+                   </div>
           
         </div>
     </header>
    <main>
 
-        <div class="max-w-7xl mx-auto px-2.5">
+    <section>
 
-            <section>
+         <div class="max-w-7xl mx-auto px-2.5">
 
-                <div class="flex items-center py-14"> 
 
-                     <div class=" flex-1">
-                    <h1 class="text-gray-950 font-[inter] font-bold text-5xl ">Ready-Made Projects <br> <span class="bg-linear-to-r from-blue-400 to-blue-700 bg-clip-text text-transparent">Ready When You Are.</span></h1>
-                    <p>We provide pre-built, high-quality projects for students from console-based programs to full-featured web applications. Get your code fast, reliable, and ready to deploy.</p>
+                <div class="flex items-center py-14 flex-col-reverse"> 
+
+                     <div class=" flex-1 text-center">
+                    <h1 class="text-gray-950 font-[inter] font-bold text-4xl my-2 ">Ready-Made Projects <br> <span class="bg-linear-to-r from-blue-400 to-blue-700 bg-clip-text text-transparent text-3xl">Ready When You Are.</span></h1>
+                    <p class="text-[15px] font-semibold text-gray-700">We provide pre-built, high-quality projects for students from console-based programs to full-featured web applications. Get your code fast, reliable, and ready to deploy.</p>
+
+                    <button class="bg-linear-to-r from-blue-400 to-blue-700 py-2 px-5.5 text-white w-full mt-3">Explore</button>  
+                     
+                    <div class="flex w-full justify-center gap-5.5 mt-7.5">
+
+                        <div class="bg-[#b1def341] rounded-2xl p-2.5 flex-1">
+                            <p class="text-2xl font-bold">14+</p>
+                            <p class="font-semibold">Project</p>
+                        </div>
+                             <div class="bg-[#b1def341] rounded-2xl p-2.5 flex-1">
+                            <p class="text-2xl font-bold">2</p>
+                            <p class="font-semibold">Developer</p>
+                        </div>
+                             <div class="bg-[#b1def341] rounded-2xl p-2.5 flex-1">
+                            <p class="text-2xl font-bold">100%</p>
+                            <p class="font-semibold">Trustworthy</p>
+                        </div>
+                    </div>
                 </div>
 
-                <div class="flex-1 bg-line justify-items-center">
+                <div class="flex-1 bg-line justify-items-center z-[-999]">
 
 
                     <img src="/asset/hero.png" alt="" class="transform scale-x-[-1] w-90 drop-shadow-xl/25 drop-shadow-blue-500 ">
 
                 </div>
-                </div>
-               
-            </section>
+    </section>
+       
+    <section>
 
+        <div class=" bg-radial from-gray-900 from-100% to-gray-300" >
+
+              <div class="max-w-7xl mx-auto px-2.5 text-center">
+
+                <p class="text-white font-bold text-2xl">Who We Are?</p>
+                <p class="text-[12px] text-white">We are freelance developers passionate about helping students and beginners by providing ready-made projects.
+                     Whether it’s a web-based system, console app, or mobile UI we’ve got it covered.</p>
+
+
+               </div>
 
         </div>
+      
+    </section>
+        
     </main>
     </div>
     
 
+    <script src="index.js"></script>
  
 </body>
 </html>
